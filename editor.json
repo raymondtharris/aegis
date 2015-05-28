@@ -1,0 +1,5 @@
+[
+	{"name":"Text", "action": "enableTextMode()"},
+	{"name":"Media", "action": "enableMediaMode()"}
+
+]

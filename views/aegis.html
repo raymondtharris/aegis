@@ -1,0 +1,78 @@
+<div class="aegisContainer" data-ng-controller="AegisPlatformController" setupcheck>
+	<div class="aegisplatformBanner" data-ng-controller="AegisPlatformDashboardController">
+		<div class="aegisplatformlogoContainer">
+			<div style="float:left; color:#fff;padding-top:4px;font-size:24px;">Aegis Platform</div>
+			<div style="margin-left:922px;color:#fff;padding-top:8px;font-size:18px;" ng-click="openBlog()">View Blog</div>
+		</div>
+	</div>	
+	
+	<div class="aegisplatformDashboard" data-ng-controller="AegisPlatformDashboardController">
+	<!--
+		<ul class="aegisplatformActionContainer">
+			<li class="aegisplatformActionList" data-ng-repeat="dash in dashboardMenu" data-ng-click="navigateTo()">{{dash.name}}</li>
+		</ul>
+	-->
+		<div class="aegisplatformUserSettings">
+			<div style="font-size:22px;">Info</div>
+			<form>
+				<label>Blog Name</label>
+				<input type="text" ng-model="blogname"/>
+				<br/>
+				<label>Blog URL</label>
+				<input type="text" ng-model="blogurl"/>
+				<br/>
+				<label style="float:left;">Pagination</label>
+				<!--<select ng-model="paginationType">
+					<option ng-repeat="picks in blogPaginationTypes">{{picks}}</option>
+				</select>-->
+				<drop-down options="blogPaginationTypes" ng-model="paginationType"  style="margin-left:100px;margin-top:-4px; display:block;"></drop-down>
+				<br/>
+				<label style="float:left;">Posts/Page</label>
+				<!--<select  ng-model="paginationPerPage">
+					<option ng-repeat="picks in blogPaginationAvailable">{{picks}}</option>
+				</select>-->
+				<drop-down options="blogPaginationAvailable" ng-model="paginationPerPage" style="margin-left:100px;margin-top:-4px; display:block;"></drop-down>
+				<br/>
+				<input type="submit" value="Update"/>
+				</form>
+				<!--<button ng-click="tempit()">scopeit</button>-->
+		</div>
+		
+		<div class="aegisplatformThemesContainer">
+			<div style="width:100%;height:26px;text-indent:0px;font-size:22px;">Themes</div>
+			<img class="aegisplatformThemePreview" ng-src=""/>
+			
+			<!--
+			<form class="aegisplatformThemeForm" data-ng-submit="changeTheme()">-->
+				<!--ng-options="themes.Name for themes in availableThemes" -->
+				<!--
+				<select  ng-options="themes.Name for themes in availableThemes" ng-model="currTheme">
+					<option ng-repeat="themes in availableThemes" id="{{themes.Name}}">{{themes.Name}}</option>
+				</select>-->
+				<input type="submit" value="Update"/>
+			</form>
+		</div>
+		
+		<div id="aegisLatestPosts">
+			<div style="margin-left:10px;font-size:22px;">Posts</div>
+			<ul>
+				<li ng-repeat="post in latestposts" style="list-style:none;padding:4px 0px;">
+					<span style="float:left;width:700px;margin-right:10px;">{{post.title}}</span>
+					<div ng-if="post.published">
+					<button ng-click="changePublishedStatus()"  style="float:left; " class="aegisplatformPostListButton clickable">Published</button>
+					</div>
+					<div ng-if="!post.published">
+						<button ng-click="changePublishedStatus()" class="aegisplatformPostListButton clickable"  style="float:left;">Not Published</button>
+					</div>	
+					<button ng-click="editPost()" style="margin-left:10px;float:left;" class="aegisplatformPostListButton clickable">Edit</button>
+					<button ng-click="deletePost()" style="margin-left:10px;" class="aegisplatformPostListButton clickable">Delete</button>
+				</li>
+			</ul>
+			<div style="margin-left:800px;">
+				<button ng-click="navigateTo('np')" class="aegisplatformPostListButton clickable">New Post</button>
+				<button ng-click="navigateTo('pl')" class="aegisplatformPostListButton clickable">More Posts</button>
+			</div>
+		</div>
+		<drop-down options="themeList"></drop-down>
+	</div>
+</div>

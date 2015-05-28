@@ -1,0 +1,19 @@
+<div data-ng-controller="AegisPlatformPostsController" class="aegisFont">
+	<div class="aegisplatformBanner" data-ng-controller="AegisPlatformDashboardController">
+		<div class="aegisplatformlogoContainer">
+			<div style="float:left; color:#fff;padding-top:4px;font-size:24px;" class="clickable" ng-click="goDashboard()">Aegis Platform</div>
+			<div style="margin-left:922px;color:#fff;padding-top:8px;font-size:18px;" class="clickable" ng-click="openBlog()">View Blog</div>
+		</div>
+	</div>	
+	<div class="aegisplatformPostsList" ng-repeat="post in postlist">
+		<span style="float:left;width:760px;margin-right:10px;">{{post.title}}</span>
+		<div ng-if="post.published">
+		<button ng-click="changePublishedStatus()"  style="float:left; " class="aegisplatformPostListButton clickable">Published</button>
+		</div>
+		<div ng-if="!post.published">
+			<button ng-click="changePublishedStatus()" class="aegisplatformPostListButton clickable"  style="float:left;">Not Published</button>
+		</div>	
+		<button ng-click="editPost()" style="margin-left:10px;float:left;" class="aegisplatformPostListButton clickable">Edit</button>
+		<button ng-click="deletePost()" style="margin-left:10px;" class="aegisplatformPostListButton clickable">Delete</button>
+	</div>
+</div>

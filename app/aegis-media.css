@@ -1,0 +1,312 @@
+.aegisFont{
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", sans-serif;
+}
+/* AegisGallery */
+
+.aegisGallery{
+	box-shadow: 0px 10px 14px #888888;
+	margin:auto;
+	width:960px;
+	height:576px;
+	overflow:scroll;
+}
+.aegisGalleryControls{
+	border-bottom:1px solid #cc3322;
+	width:960px;
+	height:40px;
+	position:absolute;
+}
+.aegisGalleryControlsBacking{
+	width:960px;
+	height:40px;
+	opacity:0.5;
+	background:#fff;
+}
+.aegisGalleryControlsContainer{
+	position:relative;
+	top:-35px;
+	left:20px;
+}
+
+.aegisGalleryButton{
+	width:80px;
+	height:30px;
+}
+.aegisBackButton{
+	width:40px;
+	height:30px;
+	margin-left:750px;
+}
+.aegisForwardButton{
+	width:40px;
+	height:30px;
+	margin-left:10px;
+}
+.aegisGalleryAllImages{
+	width:100%;
+	padding-top:56px;
+	height:506px;
+}
+.aegisGalleryImageDiv{
+	display:inline-block;
+	margin-top:-4px;
+}
+.aegisGalleryImage{
+	width:160px;
+	height:auto;
+}
+.aegisGalleryViewingDiv{
+	height:100%;
+	width:100%;
+	margin:auto;
+}
+.aegisGalleryViewingImage{
+	background:#fff;
+	display:block;
+	margin:auto;
+	height:576px;
+	width:auto;
+}
+
+
+/** AegisVideo **/
+.aegisVideoPlayer{
+	width:960px; 
+	height:540px;
+	margin:auto;
+	box-shadow: 0px 10px 14px #888888;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", sans-serif;
+}
+.aegisVideoProgress{
+	opacity:1.0;
+	-webkit-appearance: none;
+	border-radius:4px;
+	background-image: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        color-stop(0.0, rgba(255,255,255,1.0)),
+        color-stop(0.0, rgba(0,0,0,0.2))
+    );
+    border: 1px none #bbb;
+	height: 8px;
+	width: 700px;
+	margin: auto;
+	outline: none;
+	vertical-align: middle;
+}
+.aegisVideoProgress::-webkit-slider-thumb {
+	opacity:1.0;
+	-webkit-appearance: none !important;
+	border-radius: 10px;
+	background-color: #fff;
+	border: 1px solid #bbb;
+	height: 20px;
+	width: 20px;
+}
+
+.aegisVideoVolume{
+	-webkit-appearance: none;
+	border-radius: 2px;
+	background-image: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        color-stop(1.0, #333),
+        color-stop(1.0, #bbb)
+    );
+	height: 4px;
+	width: 180px;
+	margin: auto;
+	outline: none;
+	vertical-align: middle;
+}
+.aegisVideoVolume::-webkit-slider-thumb {
+	-webkit-appearance: none !important;
+	border-radius: 10px;
+	background-color: #FFF;
+	border: 1px solid #999;
+	height: 14px;
+	width: 14px;
+}
+
+/*temp*/
+#optionText{
+	visibility: hidden;
+}
+.aegisVisualContainer:hover{
+	visibility: visible;
+}
+/** Aegis Audio Player **/
+.aegisAudioPlayer{
+	width:400px; 
+	height:600px;
+	border:0px none #bbb;
+	background:#fff;
+	margin:auto;
+	box-shadow: 0px 10px 14px #888888;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", sans-serif;
+
+}
+.aegisAudioControlsTime{
+	width: 380px;
+	height: 30px;
+	padding-top: 10px;
+	margin: auto;
+}
+.aegisAudioDescription{
+	width: 380px;
+	height: 30px;
+	padding-top: 2px;
+	margin: auto;
+	text-align: center;
+}
+.aegisAudioTime{
+	font-size: 12px;
+	display: inline;
+	padding: 0px 12px;
+}
+.aegisAudioMiddleControls{
+	width: 50px;
+	height: 50px;
+	margin: auto;
+}
+.aegisAudioVolumeControls{
+	width: 244px;
+	height: 20px;
+	padding-top: 4px;
+	margin: auto;
+}
+
+.aegisAudioProgress{
+	-webkit-appearance: none;
+	border-radius: 0px;
+	background-image: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        color-stop(0.0, #2299cc),
+        color-stop(0.0, #bbb)
+    );
+	height: 8px;
+	width: 270px;
+	margin: auto;
+	outline: none;
+	vertical-align: middle;
+}
+.aegisAudioProgress::-webkit-slider-thumb {
+	-webkit-appearance: none !important;
+	border-radius: 0px;
+	background-color: #cc3322;
+	border: 0px none #999;
+	height: 20px;
+	width: 4px;
+}
+.aegisAudioVolume{
+	-webkit-appearance: none;
+	border-radius: 2px;
+	background-image: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        color-stop(0.5, #333),
+        color-stop(0.5, #bbb)
+    );
+	height: 4px;
+	width: 180px;
+	margin: auto;
+	outline: none;
+	vertical-align: middle;
+}
+.aegisAudioVolume::-webkit-slider-thumb {
+	-webkit-appearance: none !important;
+	border-radius: 10px;
+	background-color: #FFF;
+	border: 1px solid #999;
+	height: 14px;
+	width: 14px;
+}
+
+.audioButton{
+	background: url("Audioplayer.png");
+	background-size: 120px 50px;
+}
+
+.aegisAudioPlayButton{
+	width: 50px;
+	height: 50px;
+	position: relative;
+	top:0px;
+	left: 2px;
+	border-style: none;
+	outline: none;
+	background-position: 0px 1px;	
+}
+.aegisAudioPauseButton{
+	width: 50px;
+	height: 50px;
+	position: relative;
+	top:0px;
+	left: -8px;
+	border-style: none;
+	outline: none;
+	background-position: 80px 0px;
+}
+
+.aegisAudioLowVolume{
+	width: 25px;
+	height: 25px;
+	position: relative;
+	left: 0px;
+	top:9px;
+	border-style: none;
+	margin-left: 0px;
+	margin-right: 0px;
+	float: left;
+	background-position: 20px 1px;
+}
+.aegisAudioHighVolume{
+	width: 25px;
+	height: 25px;
+	position: relative;
+	position: relative;
+	left: 0px;
+	top:14px;
+	margin-left: 10px;
+	display: inline-block;
+	border-style: none;
+	background-position: 20px 21px;
+}
+
+.mediaButton{
+	background: url("mediaplayer.png");
+	width: 40px;
+	height: 36px;
+	background-size: 120px 36px;
+}
+
+.aegisvideoPlayButton{
+	position: relative;
+	top:0px;
+	left: 2px;
+	border-style: none;
+	outline: none;
+	background-position: 0px 1px;	
+}
+.aegisvideoPauseButton{
+	position: relative;
+	top:0px;
+	left: 2px;
+	border-style: none;
+	outline: none;
+	background-position: 80px 0px;
+}
+
+.aegisvideoFullscreenButton{
+	position: relative;
+	left: 908px;
+	top:-94px;
+	border-style: none;
+	background-position: 40px 1px;
+}
+

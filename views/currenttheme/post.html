@@ -1,0 +1,15 @@
+<div ng-controller="AegisPlatformBlogController">
+  <div  class="blogTitle clickable" ng-click="gotoHome()">
+    {{blogdata.blogname}}
+  </div>
+  <div  class="postBlock" >
+    <div class="postBodyContainer">
+      <div class="postTitleContainer">
+        <div class="postTitle">{{currentPost.title}}</div>
+        <div class="postDate"></div>
+      </div>
+      <div class="postBody" ng-bind-html="currentPost.body"></div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,14 @@
+<div data-ng-controller='aegisTestController'>
+	<div data-ng-controller="AegisPlatformThemesController">
+		<div ng-if="!NewThemeAdding">
+			<textarea ng-model="jsonThemeData" style="resize:none;"></textarea>{{jsonThemeData}}
+			<div>Example:<br/>{<br> "name":"Aegis",<br>"version":"0.1",<br>"directory":"/aegis/"<br>}</div>
+			<button class="aegisButton aegisRed" ng-click="submitThemeData(jsonThemeData)">Add</button>
+		</div>
+		<div ng-if="!NewThemeAdding">
+			<drop-down options="themenames"></drop-down>
+		</div>
+	</div>
+
+	
+</div>

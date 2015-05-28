@@ -1,0 +1,31 @@
+<div ng-controller="AegisPlatformBlogController">
+	<div class="blogTitle clickable" ng-click="gotoHome()" >
+		{{blogdata.blogname}}
+	</div>
+<!--
+	<div class="postBlock" ng-repeat="post in postlist">
+		<div class="postBodyContainer">
+			<div class="postTitleContainer">
+				<div class="postTitle">{{post.title}}</div>
+			</div>
+			<div ng-bind-html="post.body" post="{{post._id}}"></div>
+		</div>
+	</div>
+-->
+	<div ng-repeat="st in newposts" class="postBlock" >
+		<div class="postBodyContainer">
+			<div class="postTitleContainer">
+				<div class="postTitle clickable" ng-click="gotoPost(st._id)">{{st.title}}</div>
+				<div class="postDate">{{formatDate(st.date)}}</div>
+			</div>
+			<div class="postBody" ng-bind-html="st.body"></div>
+		</div>
+	</div>
+	<div class="lowerNavContainer" ng-if="!infScroll"> 
+		<button class="newoldButton newerButton clickable" ng-if='navControl.prev' ng-click="more('--')">Newer</button>
+		<button class="newoldButton olderButton clickable" ng-if='navControl.next' ng-click="more('++')">Older</button>
+	</div>
+	<div class="lowerNavContainer" ng-if="infScroll"> 
+		<button class="newoldButton seeMoreButton clickable"  ng-if="navControl.next" ng-click="morePosts()">See More</button>
+	</div>
+</div>

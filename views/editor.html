@@ -1,0 +1,33 @@
+<div class="container" data-ng-controller="AegisPlatformController">
+editor
+	<div class="tools_menu" data-ng-controller="AegisPlatformEditorController">
+		<div data-ng-repeat="tool in editorTools">
+			<div ng-click="$eval(tool.action)"> {{tool.name}}</div>
+		</div>
+		<div ng-if="modes.textMode">
+			<button ng-click="newTextBlock()">new block</button>
+			<!--
+			<button ng-if="opt.initial" ng-repeat="opt in textOptions" ng-click="changeTextOptions($eval('opt.initial'))">{{opt.initial}}</button>
+			-->
+			<button ng-if="opt.initial" ng-repeat="opt in alignOptions" ng-click="changeAlignOptions($eval('opt.initial'))">{{opt.initial}}</button>
+
+		</div>
+		<div ng-if="modes.mediaMode">
+			<form>
+				<input type="file" multiple="" file/>
+			</form>
+		</div>
+		<div>
+			<button ng-click="cancelPost()">Cancel</button>
+			<button ng-click="savePost()">Save</button>
+		</div>
+		<div class="edit-area">
+			<title-input></title-input>
+			<edit-area>
+			</edit-area>
+		</div>
+	</div>
+	
+
+
+</div>

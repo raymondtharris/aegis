@@ -1,0 +1,52 @@
+<div class="graybg">
+	<editor ng-controller="AegisPlatformEditorBeta">
+		<div class="betaToolsContainer">
+			<div class="betaToolsArea" >
+				<div class="betaAegisBanner aegisRed">Aegis - <div class="aegisGray" style='display:inline;' contenteditable ng-model='title'>Untitled</div> </div>
+				<!--<button ng-click="editTitle()" class="betaToolsButton documentButton titleButton"></button>-->
+				<span></span>
+				<button ng-click="editTitle()" class="aegisButton innerShadow aegisGray" style="margin-left:10px;margin-right:0px;">H1</button>
+				<button ng-click="editTitle()" class="aegisButton innerShadow aegisGray" style="margin-left:0px;">H2</button>
+				<span></span>
+				<button ng-click="styleText('b')" class="aegisButton innerShadow aegisGray" style="font-weight:bold;width:34px;">B</button>
+				<button ng-click="styleText('i')" class="aegisButton innerShadow aegisGray" style="font-style:italic;width:34px;">I</button>
+				<button ng-click="styleText('u')" class="aegisButton innerShadow aegisGray" style="text-decoration:underline;width:34px;">U</button>
+				<span></span>
+				<button ng-click="alignText('l')" class="aegisButton alignButton alignLeftButton innerShadow">&nbsp;</button>
+				<button ng-click="alignText('c')" class="aegisButton alignButton alignCenterButton innerShadow">&nbsp;</button>
+				<button ng-click="alignText('r')" class="aegisButton alignButton alignRightButton innerShadow">&nbsp;</button>
+				<span></span>
+				<button ng-click="addHyperlink()" class="aegisButton formatButton addlinkButton innerShadow">&nbsp;</button>
+				<input type="file" ng-click="" class="aegisButton aegisGray fileButton"  value="File">
+				<span class="betaCommitContainer">
+					<button ng-click="cancelPost()" class="aegisButton innerShadow aegisRed" style='font-size:18px;'>Cancel</button>
+					<button ng-click="savePostInit()" class="aegisButton innerShadow aegisRed" style='font-size:18px;'>Save</button>
+				</span>
+				
+			</div>
+		</div>
+		<!--<span id="postTitle">{{title}}</span>-->
+		<div ng-if="toPublish" style="margin:auto; width:240px;background:none;">
+			<button ng-click="savePost(true)" class=" aegisButton" style='margin-left:4px;background:#fff;border:1px solid #ccc;'>Save & Publish</button>
+			<button ng-click="savePost(false)" class="aegisButton" style="background:#fff;border:1px solid #ccc;">No</button>
+		</div>
+		<div class="betaEditArea" id="editorarea" contenteditable ng-model="editData" droppable>
+			<div>Add Text</div>
+		</div>
+		<!--<div style="margin-left:340px">{{editData}}
+		</div>
+		-->
+		<div ng-if="hyperlink">
+			<input type="text" ng-model="hyperlinkSrc" placeholder="link"/>
+			<input  type="submit" ng-click="addLink()" value="add">
+		</div>
+		
+		<div ng-if="dropCount" style="width:504px;height:260px;margin:auto;background:#fff;box-shadow: 0px 10px 14px #888888;padding-top:16px;">
+			<button class="aegisButton clearBorder" style='margin:0 18px;padding-bottom:20px;' ng-click='imagesType("single")'><div style='background:url("gallery.png");background-size:400px 200px;width:200px;height:200px;background-position:0 0;'></div>Single</button>
+			<button class="aegisButton clearBorder" style='margin:0 18px;padding-bottom:20px;' ng-click='imagesType("gallery")'><div style='background:url("gallery.png");background-size:400px 200px;width:200px;height:200px;background-position:200px 0;'></div>Gallery</button>
+		</div>
+		<div class="pad">
+		</div>
+	</editor>
+	
+</div>

@@ -1,0 +1,5 @@
+[
+	{"name":"New Post", "path" :"/Aegis/new-post"},
+	{"name":"Post List", "path" :"/Aegis/posts"},
+	{"name":"Media Gallery", "path" :"/Aegis/media-gallery"}
+]
